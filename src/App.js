@@ -1,25 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import styled from "styled-components";
+
+import MainGraph from './Components/Chart';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Body>
+      <GraphBox>
+        {/* <MainGraph /> */}
+      </GraphBox>
+    </Body>
   );
 }
 
+const Body = styled.div`
+  background-color: #43454b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+`
+
+const GraphBox = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 600px;
+  background-color: #fff;
+`
 export default App;
