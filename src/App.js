@@ -7,7 +7,7 @@ function App() {
   return (
     <Body>
       <GraphBox>
-        {/* <MainGraph /> */}
+        <MainGraph />
       </GraphBox>
     </Body>
   );
